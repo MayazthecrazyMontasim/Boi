@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Archives - Immersive Reader</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="reading-environment">
+        
+        <nav class="vintage-toolbar">
+            <!-- Uses the Cinzel font we imported -->
+            <div class="logo">Library Archives</div>
+            <div class="menu-items">
+                <!-- We will wire this button up to trigger the hidden file input -->
+                <button class="brass-btn" id="open-file-btn"><i class="fas fa-folder-open"></i> Import Document</button>
+                <button class="brass-btn"><i class="fas fa-eye"></i> View</button>
+                <button class="brass-btn"><i class="fas fa-wrench"></i> Tools</button>
+                <button class="brass-btn"><i class="fas fa-cog"></i> Settings</button>
+            </div>
+        </nav>
+
+        <main class="book-container">
+            <!-- The Javascript will turn this empty div into a 3D book -->
+            <div id="flipbook" class="flipbook-wrapper"></div>
+            
+            <input type="file" id="pdf-upload" accept="application/pdf" style="display: none;">
+            
+            <div class="floating-tools">
+                <button class="tool-btn highlighter" title="Highlighter"><i class="fas fa-marker"></i></button>
+                <button class="tool-btn pen" title="Feather Pen"><i class="fas fa-pen-nib"></i></button>
+                <button class="tool-btn comment" title="Add Note"><i class="fas fa-comment-dots"></i></button>
+            </div>
+        </main>
+    </div>
+
+    <!-- The audio file that will play accurately when turning -->
+    <!-- Note: You will need to drop a sweeping sound file named 'page-turn.mp3' in your static folder -->
+    <audio id="page-turn-sound" src="/static/page-turn.mp3" preload="auto"></audio>
+
+    <!-- PDF.js for rendering PDF text/images to Canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <!-- StPageFlip for the 3D curl physics -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
+    
+    <!-- Our MVC Logic files -->
+    <script src="/static/js/model.js"></script>
+    <script src="/static/js/controller.js"></script>
+</body>
+</html>
