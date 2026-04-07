@@ -116,3 +116,9 @@ body {
     border-radius: 2px; /* Slight softening of the page edge */
 }
 
+/* Makes the raw PDF shrink to perfectly fit our vintage 3D pages */
+.page canvas {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply; /* This blends the text into the parchment beautifully */
+}
