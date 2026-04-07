@@ -88,11 +88,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-/* CSS for the actual Book Pages */
-.page {
-    background-color: #e6d3b3; /* Rich parchment color */
-    background-image: url('https://www.transparenttextures.com/patterns/aged-paper.png');
-    border: 1px solid #c7a77b;
-    box-shadow: inset 0 0 20px rgba(100,60,20,0.1);
-    border-radius: 2px; /* Slight softening of the page edge */
-}
+
