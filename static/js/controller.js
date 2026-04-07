@@ -62,13 +62,13 @@ document.addEventListener('DOMContentLoaded', function() {
     function initializeFlipbook() {
         // We use the StPageFlip library from our HTML file
         pageFlipInstance = new St.PageFlip(flipbookContainer, {
-            width: 450, // Standard vintage book dimensions
-            height: 600,
+            width: 550, // Standard vintage book dimensions
+            height: 733,
             size: "stretch", // Allows it to scale beautifully on screen
             minWidth: 315,
-            maxWidth: 600,
+            maxWidth: 1000,
             minHeight: 420,
-            maxHeight: 800,
+            maxHeight: 1333,
             maxShadowOpacity: 0.8, // Deep, dark academia shadows
             showCover: true, // Makes the first page act like a heavy book cover
             mobileScrollSupport: false 
